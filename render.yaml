@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: openlens-news
+    runtime: python
+    plan: free
+    region: frankfurt
+    buildCommand: echo "No dependencies to install"
+    startCommand: python3 server.py
+    healthCheckPath: /api/health
